@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Tour as Tour;
+use App\Ciudad as Ciudad;
 
 class toursController extends Controller
 {
@@ -23,7 +25,15 @@ class toursController extends Controller
      */
     public function create()
     {
-        //
+        
+        $tour =new Tour;
+        $ciudades = Ciudad::all(['id', 'name']);
+        $ciudades = Ciudad::pluck('name', 'id');
+
+
+
+        return view('tours/create',['tour'=>$tour,'ciudades'=>$ciudades]);
+
     }
 
     /**
@@ -34,7 +44,26 @@ class toursController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tour=new Tour;
+
+      $tour->nombre=$request->nombre;
+      $tour->descripcion=$request->descripcion;
+      $tour->imagen=$request->imagen;
+      $tour->incluye=$request->incluye;
+      $tour->noincluye=$request->noincluye;
+      $tour->terycond=$request->terycond;
+      $tour->ciudadsal_id=$request->ciudadsal_id;
+      $tour->ciudadllega_id=$request->ciudadllega_id;
+
+
+      if($tour->save()){
+        return redirect("admin/tours/create");
+      }
+      else{
+        return view("admin/tours/create",["tours"=>$tour]);
+      }
+
+
     }
 
     /**

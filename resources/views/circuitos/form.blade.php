@@ -1,5 +1,5 @@
 
-{!! Form::open(['url' => $url, 'method' =>$method, 'novalidate']) !!}
+{!! Form::open(['url' => $url, 'method' =>$method, 'novalidate', 'files'=>true]) !!}
                 
                 
 
@@ -22,15 +22,13 @@
 
 
                  
-
-                 <div class="form-group {{ $errors->has('imagen') ? 'has-error' : ''}}">
+                <div class="form-group {{ $errors->has('imagen') ? 'has-error' : ''}}">
                 {!! Form::label('imagen', 'Imagen: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::file('imagen') !!}
-                    {!! $errors->first('imagen',$circuito->imagen,'<p class="help-block">:message</p>') !!}
+                    {!! $errors->first('imagen', '<p class="help-block">:message</p>') !!}
                 </div>
-              </div>
-
+            </div>
             
 
 
@@ -76,7 +74,7 @@
              <div class="form-group {{ $errors->has('terycond') ? 'has-error' : ''}}">
                 {!! Form::label('terycond', 'Terminos y Condiciones: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::textarea('terycod', null, ['class'=>'wyseditor']) !!}
+                    {!! Form::textarea('terycond', null, ['class'=>'wyseditor']) !!}
                     {!! $errors->first('terycond',$circuito->terycond, '<p class="help-block">:message</p>') !!}
                 </div>
             </div>

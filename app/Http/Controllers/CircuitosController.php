@@ -7,6 +7,7 @@ use App\Circuito as Circuito;
 use App\Ciudad as Ciudad;
 
 
+
 use input;
 
 class CircuitosController extends Controller
@@ -88,7 +89,7 @@ class CircuitosController extends Controller
 
 
       if($circuito->save()){
-        return redirect("admin/circuitos");
+        return redirect("admin/circuitos/create");
       }
       else{
         return view("admin/circuitos/create",["circuitos"=>$circuito]);

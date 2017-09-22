@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Circuito extends Model
 {
@@ -16,7 +17,10 @@ class Circuito extends Model
 
 
  public function setImagenAttribute($imagen){
-        if(!empty($imagen)){
+    
+
+    if(!empty($imagen)){
+    	
     $this->attributes['imagen']=Carbon::now()->second.$imagen->getClientOriginalName();
     $name=Carbon::now()->second.$imagen->getClientOriginalName();
     \Storage::disk('public')->put($name,\File::get($imagen));

@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 <!--Form of Circuitos-->
 
 

@@ -26,7 +26,7 @@ Auth::routes();
 
 
 Route::resource('productscir', 'CircuitosController');
-//Route::resource('circuitos', 'CircuitosController');
+Route::resource('circuitos', 'CircuitosController');
 Route::resource('reserv','salesController');
 Route::resource('create','salesController');
 Route::resource('tours','toursController');
@@ -47,11 +47,11 @@ Route::get('/home', 'HomeController@index');
 
 
 
-Route::get('/tours',function() 
+/*Route::get('/tours',function() 
 {return view('tours');}
 
 	);
-
+*/
 Route::get('/hotel',function() 
 {return view('hotel');}
 
@@ -101,6 +101,7 @@ Route::get('/home', 'HomeController@index');
 
     Route::resource('circuitos', 'CircuitosController');
     Route::resource('ciudades','ciudadesController');
+    Route::resource('tours','toursController');
 
     
 

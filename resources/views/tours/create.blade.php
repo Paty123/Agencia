@@ -14,9 +14,9 @@
                    
    <div class="form-horizontal">
  
-<h1>Agregar Tours</h1>
+<h1  class="titlename">Agregar Tours</h1>
 
-@include('tours.form',['circuito'=>$circuito,'url'=>'/tours','method'=> 'POST'])
+@include('tours.form',['tours'=>$tour,'url'=>'/tours','method'=> 'POST'])
 
 
  </div>

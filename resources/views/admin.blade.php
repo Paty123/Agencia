@@ -157,8 +157,8 @@
 
           <ul class="treeview-menu">
             
-            <li><a href=""><i class="fa fa-circle-o"></i>Lista</a></li>
-            <li><a href=""><i class="fa fa-circle-o"></i>Nuevo</a></li>
+            <li><a href="{{ url('/admin/tours/create') }}"><i class="fa fa-circle-o"></i>Lista</a></li>
+            <li><a href="{{ url('/admin/tours/create') }}"><i class="fa fa-circle-o"></i>Nuevo</a></li>
           </ul>
         </li>
         <li class="treeview">
