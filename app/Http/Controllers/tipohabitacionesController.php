@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Tipohab as Tipohab;
+
 
 class tipohabitacionesController extends Controller
 {
@@ -23,7 +25,11 @@ class tipohabitacionesController extends Controller
      */
     public function create()
     {
-        //
+        $tipohab =new Tipohab;
+        
+
+
+        return view('tipohabitaciones/create',['tipohab'=>$tipohab]);
     }
 
     /**
@@ -34,7 +40,22 @@ class tipohabitacionesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+          $tipohab=new Tipohab;
+
+
+          $tipohab->type=$request->type;
+          $tipohab->adultos=$request->adultos;
+          $tipohab->infantes=$request->infantes;
+
+
+
+         if($tipohab->save()){
+        return redirect("admin/tipohabitaciones/create");
+      }
+      else{
+        return view("admin/tipohabitaciones/create",["tipohab"=>$tipohab]);
+      }
+
     }
 
     /**

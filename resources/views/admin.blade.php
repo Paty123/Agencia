@@ -167,8 +167,8 @@
             <span>Hoteles</span></a>
           <ul class="treeview-menu">
            
-            <li><a href=""><i class="fa fa-circle-o"></i>Lista</a></li>
-            <li><a href=""><i class="fa fa-circle-o"></i>Nuevo</a></li>
+            <li><a href="{{ url('/admin/hotel/create') }}"><i class="fa fa-circle-o"></i>Lista</a></li>
+            <li><a href="{{ url('/admin/hotel/create') }}"><i class="fa fa-circle-o"></i>Nuevo</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -210,8 +210,8 @@
             
           </a>
           <ul class="treeview-menu">
-            <li><a href=""><i class="fa fa-circle-o"></i>Lista</a></li>
-            <li><a href=""><i class="fa fa-circle-o"></i>Nuevo</a></li>
+            <li><a href="{{ url('/admin/tipopersona/create') }}"><i class="fa fa-circle-o"></i>Lista</a></li>
+            <li><a href="{{ url('/admin/tipopersona/create') }}"><i class="fa fa-circle-o"></i>Nuevo</a></li>
           </ul>
         </li>
         <li>
@@ -220,8 +220,8 @@
             
           </a>
           <ul class="treeview-menu">
-            <li><a href=""><i class="fa fa-circle-o"></i>Lista</a></li>
-            <li><a href=""><i class="fa fa-circle-o"></i>Nuevo</a></li>
+            <li><a href="{{ url('/admin/tipohabitaciones/create') }}"><i class="fa fa-circle-o"></i>Lista</a></li>
+            <li><a href="{{ url('/admin/tipohabitaciones/create') }}"><i class="fa fa-circle-o"></i>Nuevo</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -251,6 +251,26 @@
           <ul class="treeview-menu">
             <li><a href=""><i class="fa fa-circle-o"></i>Lista</a></li>
             <li><a href=""><i class="fa fa-circle-o"></i>Nuevo</a></li>
+          </ul>
+            </li>
+        
+          </ul>
+        </li>
+
+
+
+        <!--prueba Perdiodo-->
+
+
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-share"></i> <span>Periodo</span>
+            
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ url('/admin/periodocir/create') }}"><i class="fa fa-circle-o"></i>Lista</a></li>
+            <li><a href="{{ url('/admin/periodocir/create',[$circuito->id])) }}"><i class="fa fa-circle-o"></i>Nuevo</a></li>
           </ul>
             </li>
         

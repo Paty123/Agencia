@@ -28,6 +28,7 @@ class CircuitosController extends Controller
 
        return view("productscir.circuito");
     }
+    
 
   public function autocomplete(Request $request){
 

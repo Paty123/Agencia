@@ -3,7 +3,7 @@
                 
                 
 
-                <div class="form-group ">
+                <div class="form-group {{ $errors->has('nombre') ? 'has-error' : ''}}">
                 {!! Form::label('nombre', 'Nombre: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('nombre', null, ['class' => 'form-control']) !!}

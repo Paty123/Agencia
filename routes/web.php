@@ -37,6 +37,8 @@ Route::resource('departures','departuresController');
 Route::resource('sales','salesController');
 Route::resource('season','seasonController');
 Route::resource('tipohabitaciones','tipohabitacionesController');
+Route::resource('tipopersona','tipopersonaController');
+Route::resource('periodocir','PeriodocirController');
 
 
 
@@ -52,11 +54,11 @@ Route::get('/home', 'HomeController@index');
 
 	);
 */
-Route::get('/hotel',function() 
+/*Route::get('/hotel',function() 
 {return view('hotel');}
 
 	);
-
+*/
 Route::get('/fecha',function() 
 {return view('fecha');}
 
@@ -102,7 +104,10 @@ Route::get('/home', 'HomeController@index');
     Route::resource('circuitos', 'CircuitosController');
     Route::resource('ciudades','ciudadesController');
     Route::resource('tours','toursController');
+    Route::resource('hotel','hotelController');
+    Route::resource('tipohabitaciones','tipohabitacionesController');
+    Route::resource('tipopersona','tipopersonaController');
+    Route::resource('periodocir','PeriodocirController');
 
-    
 
   });
