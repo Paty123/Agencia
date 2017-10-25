@@ -270,7 +270,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ url('/admin/periodocir/create') }}"><i class="fa fa-circle-o"></i>Lista</a></li>
-            <li><a href="{{ url('/admin/periodocir/create',[$circuito->id])) }}"><i class="fa fa-circle-o"></i>Nuevo</a></li>
+            <li><a href="{{ url('/admin/periodocir/create') }}"><i class="fa fa-circle-o"></i>Nuevo</a></li>
           </ul>
             </li>
         

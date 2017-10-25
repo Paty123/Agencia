@@ -49,16 +49,18 @@ Route::get('/home', 'HomeController@index');
 
 
 
-/*Route::get('/tours',function() 
+
+Route::get('/tours',function() 
 {return view('tours');}
 
 	);
-*/
-/*Route::get('/hotel',function() 
+
+Route::get('/hotel',function() 
 {return view('hotel');}
 
 	);
-*/
+
+
 Route::get('/fecha',function() 
 {return view('fecha');}
 
@@ -88,7 +90,7 @@ Route::GET('admin-password/reset/{token}','Admin\ResetPasswordController@showRes
 
  
 
-Route::get('/home', 'HomeController@index');
+//Route::get('/home', 'HomeController@index');
 
 
 
@@ -107,7 +109,6 @@ Route::get('/home', 'HomeController@index');
     Route::resource('hotel','hotelController');
     Route::resource('tipohabitaciones','tipohabitacionesController');
     Route::resource('tipopersona','tipopersonaController');
-    Route::resource('periodocir','PeriodocirController');
 
 
   });

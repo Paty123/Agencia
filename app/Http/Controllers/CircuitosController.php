@@ -21,12 +21,13 @@ class CircuitosController extends Controller
     {
         $circuitos=Circuito::all();
 
-        return view ("productscir.index",["circuitos"=>$circuitos]); 
+      
+     // return view ("productscir.index",["circuitos"=>$circuitos]); 
 
         
 
 
-       return view("productscir.circuito");
+      return view("productscir.circuito");
     }
     
 
