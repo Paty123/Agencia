@@ -1,4 +1,5 @@
 
+@include('menu');
 <!DOCTYPE html>
 
 <html>
@@ -12,11 +13,10 @@
 <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
 <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
 <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}
-
 </style>
 <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
-@include('menu');
+
 </head>
 
 
@@ -199,8 +199,6 @@ $('#searchname').autocomplete({
        	$('#name').val(ui.item.value);
        }
 });
-
-
 </script>
 
 
@@ -223,9 +221,7 @@ $('#searchname').autocomplete({
             todayHighlight: true,
             language:'es',
             autoclose: true,
-
         })
-
     })
 </script>
 </html>
