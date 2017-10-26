@@ -34,11 +34,11 @@ class CircuitosController extends Controller
   public function autocomplete(Request $request){
 
   $nameT=$request->nameT;
-  $data=Circuito::where('nameT','LIKE','%'.$nameT.'%')->take(10)->get();
+  $data=Circuito::where('nombre','LIKE','%'.$nameT.'%')->take(10)->get();
   $result=array();
   foreach ($data as $key => $v) {
     
-  $result[]=['id'=>$v->id,'value'=>$v->nameT];
+  $result[]=['id'=>$v->id,'value'=>$v->nombre];
 
   }
 
