@@ -22,14 +22,30 @@ class CircuitosController extends Controller
         $circuitos=Circuito::all();
 
       
+      //return view ("productscir.index",["circuitos"=>$circuitos]); 
+
+        
+
+
+     return view("productscir.circuito",["circuitos"=>$circuitos]);
+    }
+    
+
+
+      public function indexcircuito()
+    {
+       $circuitos=Circuito::all();
+
+      
      // return view ("productscir.index",["circuitos"=>$circuitos]); 
 
         
 
 
-      return view("productscir.circuito");
+      return view("reserv.index");
     }
-    
+
+
 
   public function autocomplete(Request $request){
 
@@ -46,6 +62,17 @@ class CircuitosController extends Controller
 
 
 
+  }
+
+
+
+
+
+  public function postcircuito(){
+    
+    
+
+return  view ("reserv.index");
   }
 
 
@@ -68,6 +95,14 @@ class CircuitosController extends Controller
 
 
     }
+
+
+
+
+
+
+
+
 
     /**
      * Store a newly created resource in storage.

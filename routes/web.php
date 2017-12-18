@@ -47,6 +47,11 @@ Route::resource('periodocir','PeriodocirController');
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/index','CircuitosController@indexcircuito'
+
+
+);
+
 
 
 

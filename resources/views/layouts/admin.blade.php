@@ -13,12 +13,13 @@
 
     <title>ToursPorChiapas</title>
 
+
+
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     
     <link href="{{ asset('../image/slider/style.css') }}" rel="stylesheet">
     
-
     <!-- Scripts -->
     <script>
         window.Agencia = {!! json_encode([
@@ -40,7 +41,7 @@
 
                   <!-- Branding Image -->
                     <a class="" href="{{ url('/') }}">
-                       <!-- <img src="../image/logo.png"  class="logo" >-->
+                        <img src="../image/logo.png"  class="logo" >
                     </a>
                     
                 </div>
@@ -112,7 +113,7 @@
 
     
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js')}}"></script>
+    <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset ('js/bootstrap.min.js')}}"></script>
     <script src="{{asset ('js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{asset ('js/material.min.js')}}"></script>

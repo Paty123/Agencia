@@ -1,0 +1,564 @@
+@import url('estilos.css');
+@import url('menu.css');
+
+
+body {
+	
+	height:90%;
+	background-color:#BDBDBD;
+	color: #004c4d;
+	font-family:  myFirstFont,Helvetica, sans-serif;
+	margin:0;
+	padding: 0px;
+	/*background-image:url(../image/nubes-fondo.jpg);*/
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+    font-size:16px;
+    font-family:"Open Sans",Arial,sans-serif;
+     
+	
+
+}
+body, td, th, input, textarea, select, a {
+	font-size: 13px;
+}
+
+@font-face
+{
+font-family: myFirstFont;
+src: url('ClementePDai-Regular.ttf');
+}
+
+
+#language {
+	position: absolute;
+	top: 15px;
+	left: 400px;
+	width: 80px;
+	color: #999;
+	line-height: 17px;
+}
+#language img {
+	cursor: pointer;
+	margin-right: 5px;
+}
+#currency {
+	width: 75px;
+	position: absolute;
+	top: 15px;
+	left: 425px;
+	color: #999;
+	line-height: 17px;
+}
+#currency a {
+	display: inline-block;
+	padding: 2px 4px;
+	border: 1px solid #CCC;
+	color: #999;
+	text-decoration: none;
+	margin-right: 2px;
+	margin-bottom: 2px;
+}
+#currency a b {
+	color: #000;
+	text-decoration: none;
+}
+
+h1, .welcome {
+	color: #009ad6;
+	font: Verdana;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	font-size: 32px;
+	font-weight: normal;
+	text-shadow: 0 0 1px rgba(0, 0, 0, .01);
+}
+h2 {
+	color: #000000;
+	font-size: 16px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+p {
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+a, :visited, a b {
+	color: #009ad6;
+	text-decoration: underline;
+	cursor: pointer;
+}
+a:hover {
+	text-decoration: none;
+}
+a img {
+	border: none;
+}
+form {
+	padding: 0;
+	margin: 0;
+	display: inline;
+}
+input[type='text'], input[type='password'], textarea {
+	background: #F8F8F8;
+	border: 1px solid #CCCCCC;
+	padding: 3px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+select {
+	background: #F8F8F8;
+	border: 1px solid #CCCCCC;
+	padding: 2px;
+}
+label {
+	cursor: pointer;
+}
+
+
+/*Main Content*/
+.contenedor{
+width:72.7%;
+max-width: 980px;
+margin: 0 auto;
+background-color:#33FFFF;
+max-height: 100%;
+margin-top:2%;
+}
+
+
+
+/****Header****/
+.header{
+background-color:#ffffff;
+max-width: 980px;
+width: 100%;
+}
+.header .logo{
+width: 90%;
+max-width:150px;
+height: auto;
+top: 0px;
+left: 0px;
+position:auto;
+
+}
+.header .logo img{
+  width: 100%;
+  height: auto;
+
+}
+
+/***Carro de Compras***/
+
+
+.header #cart {
+	position:absolute;
+	top:4.5%;
+	right: 14%;
+	z-index:9;
+	min-width: 18%;
+
+}
+.header #cart .heading {
+	float: right;
+	width:100%;
+	max-width: 180px;
+	height:62px;
+	margin-right: 50%;
+	margin-left: 30%;
+	padding-left: 14px;
+	padding-right: 14px;
+	background-image:url(../image/carrito.png);
+	background-position:top;
+	background-size:cover;
+	position: relative;
+	z-index: 401;
+	text-align:center;
+}
+.header #cart .heading img{
+	width: 100%;
+	height: auto;
+
+}
+.header #cart .heading h4 {
+	color: #fff;
+	font-size: 15px;
+	text-align:center;
+	font-weight: bold;
+	margin-top: 30px;
+	margin-bottom: 3px;
+	left:50px;
+}
+.header #cart .heading a {
+	color: #fff;
+	text-decoration: none;
+}
+.header #cart .heading a span {
+	background: url('../image/arrow-down.png') 100% 50% no-repeat;
+	padding-right: 15px;
+}
+.header #cart .content {
+	clear: both;
+	display: none;
+	position: relative;
+	top: -25px;
+	padding: 8px;
+	min-height: 100px;
+	z-index:400;
+	background:gray;
+	max-width:300px;
+}
+
+.header #cart.active .heading {
+	margin-top: 0px;
+	padding-top: 0px;
+	padding-bottom:0px 0px 0px 0px;
+	width:70%;
+	max-width:180px;
+	height:62px;
+	 
+}
+.header #cart.active .content {
+	display: block;
+	left:10px;
+	top:-15px;
+	z-index:400;
+}
+
+.mini-cart-info table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom:5px;
+}
+.mini-cart-info td {
+	color: #000;
+	vertical-align: top;
+	padding: 10px 5px;
+	border-bottom: 1px solid #EEEEEE;
+}
+.mini-cart-info .image {
+	width: 1px;
+}
+.mini-cart-info .image img {
+	border: 1px solid #EEEEEE;
+	text-align: left;
+}
+.mini-cart-info .name small {
+	color: #666;
+}
+
+.mini-cart-info .quantity {
+	text-align: right;
+}
+.mini-cart-info td.total {
+	text-align: right;
+}
+.mini-cart-info .remove {
+	text-align: right;
+}
+.mini-cart-info .remove img {
+	cursor: pointer;
+}
+.mini-cart-total {
+	text-align: right;
+}
+.mini-cart-total table {
+	border-collapse: collapse;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+.mini-cart-total td {
+	color: #000;
+	padding: 4px;
+}
+.header #cart .checkout {
+	text-align: right;
+	clear: both;
+}
+.header #cart .empty {
+	padding-top: 50px;
+	text-align: center;
+}
+
+
+/***Button Search***/
+.header .search {
+	position: absolute;
+	top:15%;
+	right: 0px;
+	width: 260px;
+	z-index: 15;
+	margin-right:15%;
+}
+.header .button-search {
+	position: absolute;
+	left: 0px;
+	background: url('../image/lupa.jpg') center center no-repeat;
+	width: 28px;
+	height: 24px;
+	border:3px solid #0c588a;
+	cursor: pointer;
+}
+.header .search input {
+	background: #FFF;
+	padding: 1px 1px 1px 33px;
+	width: 200px;
+	height: 21px;
+	border: 3px solid #0c588a;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-khtml-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+
+}
+
+#header .links {
+	position: absolute;
+	top:70px;
+	right: 0px;
+	bottom: 3px;
+	font-size: 10px;
+	padding-right: 10px;
+}
+#header .links a {
+	float: left;
+	display: block;
+	padding: 0px 0px 0px 7px;
+	color: #000;
+	
+	text-decoration: none;
+	font-size: 12px;
+}
+#header .links a + a {
+	margin-left: 8px;
+	border-left: 1px solid #CCC;
+}
+/* menu */
+#menu {
+	padding-left:669px;
+	position:relative;
+	height: 37px;
+	background-color:#363435;
+        width:312px;
+        margin-top:10%;
+
+}
+#menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#menu > ul > li {
+	position: relative;
+	float: left;
+	z-index: 20;
+	padding: 6px 5px 5px 0px;
+}
+#menu > ul > li:hover {
+	
+}
+#menu > ul > li > a {
+	font-size: 13px;
+	color: #FFF;
+	line-height: 14px;
+	text-decoration: none;
+	display: block;
+	padding: 6px 10px 6px 10px;
+	
+	z-index: 6;
+	position: relative;
+}
+#menu > ul > li:hover > a {
+	background: #48b89b;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+}
+#menu > ul > li > div {
+	display: none;
+	background: #FFFFFF;
+	position: absolute;
+	z-index: 5;
+	padding: 5px;
+	border: 1px solid #000000;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	-moz-border-radius: 0px 0px 5px 5px;
+	-khtml-border-radius: 0px 0px 5px 5px;
+	border-radius: 0px 0px 5px 5px;
+	background: url('../image/menu.png');
+}
+#menu > ul > li:hover > div {
+	display: table;
+	background: #48b89b;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+}
+#menu > ul > li > div > ul {
+	display: table-cell;
+}
+#menu > ul > li ul + ul {
+	padding-left: 20px;
+}
+#menu > ul > li ul > li > a {
+	text-decoration: none;
+	padding: 4px;
+	color: #FFFFFF;
+	display: block;
+	white-space: nowrap;
+	min-width: 120px;
+}
+#menu > ul > li ul > li > a:hover {
+	background: #48b89b;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+}
+#menu > ul > li > div > ul > li > a {
+	color: #FFFFFF;
+}
+
+
+@media screen and (max-width: 980px){
+	body{
+		background-color:red;
+	}
+
+	.header #cart {
+	position:absolute;
+	top:3.5%;
+	right:25%;
+	z-index:9;
+	min-width: 18%;
+
+}
+
+/*Carrito de Compras*/
+.header #cart .heading {
+	float: right;
+	width:100%;
+	max-width:180px;
+	height:62px;
+	margin-right:40%;
+	margin-left:18%;
+	padding-left: 14px;
+	padding-right: 14px;
+	background-image:url(../image/carrito.png);
+	background-position:top;
+	background-size:cover;
+	position: relative;
+	z-index: 401;
+	text-align:center;
+}
+
+/*Menu responsive*/
+.menu .icon{
+	float: right;
+	display: block;
+}
+
+ .menu > ul > li > a  
+
+ {
+ 	display: none;
+
+ 	}
+
+
+
+}
+@media screen and (max-width:720px) {
+    body {
+        background-color:green;
+    }
+
+
+  .header #cart {
+	position:absolute;
+	top:2.5%;
+	z-index:1;
+	min-width: 18%;
+	left: 50%;
+	right:1%;
+
+}
+.header #cart .heading {
+	float: right;
+	width:100%;
+	max-width:180px;
+	height:62px;
+	padding-left: 14px;
+	padding-right: 14px;
+	background-image:url(../image/carrito.png);
+	background-position:top;
+	background-size:cover;
+	position: relative;
+	z-index: 401;
+	text-align:center;
+
+}
+.header #cart .content {
+	clear: both;
+	display: none;
+	position: relative;
+	top: -25px;
+	padding: 8px;
+	min-height: 100px;
+	z-index:400;
+	background:gray;
+	max-width:200px;
+}
+
+}
+
+@media screen and (max-width:480px){
+	body{
+		background-color: gray;
+	}
+	.header #cart {
+	top:0%;
+	right:0%;
+	margin-left:30%;
+	position:static;
+	width:85%;
+}
+
+.header #cart .content {
+	clear: both;
+	display: none;
+	position: relative;
+	top: -25px;
+	padding: 8px;
+	min-height: 100px;
+	z-index:400;
+	background:gray;
+	max-width:150px;
+}
+
+.header .search {
+	position:absolute;
+	margin-top:20%;
+	margin-left:10%;
+
+	
+	
+}
+.header .button-search {
+	position:absolute;
+	left: 0px;
+	background: url('../image/lupa.jpg') center center no-repeat;
+	width: 28px;
+	height: 24px;
+	border:3px solid #0c588a;
+	cursor: pointer;
+
+}
+
+
+
+}

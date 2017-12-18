@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Circuito as Circuito;
+
 
 class salesController extends Controller
 {
@@ -11,10 +13,36 @@ class salesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
+    private $_error;
+    private $_minhours;
+    
+    public function __construct(){
+        parent::__construct();
+        $sysdata=System::find(1);
+        if($sysdata){
+            $this->_minhours=$sysdata->minhours;
+        }else{
+            $this->_minhours=48;
+        }
+    }
+
+
+
+
+    
     public function index()
     {
-        return view("reserv.create");
+      
+       
+
+       return view("reserv.create");
     }
+
+
+
 
 
      public function autocomplete(Request $request){

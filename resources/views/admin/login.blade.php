@@ -1,4 +1,8 @@
-  @extends('layouts.admin')
+
+
+@extends('layouts.admin')
+
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 
@@ -10,12 +14,17 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <!-- CSS -->
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
-        
-        <link rel="stylesheet" href="css/supersized.css">
-        <link rel="stylesheet" href="css/stilel.css">
+        <!-- CSS 
 
+
+        <link href="{{ asset('http://fonts.googleapis.com/css?family=PT+Sans:400,700') }}" rel="stylesheet">
+        <link href="{{ asset('css/supersized.css"') }}" rel="stylesheet">
+        <link href="{{ asset('css/stilel.css"') }}" rel="stylesheet">-->
+
+
+             <link rel="stylesheet" href="<?php echo URL::asset('css/supersized.css')?>">
+             <link rel="stylesheet" href="<?php echo URL::asset('css/stilel.css')?>">
+             <link rel="stylesheet" href="<?php echo URL::asset('http://fonts.googleapis.com/css?family=PT+Sans:400,700')?>">
        
 
 
@@ -107,11 +116,18 @@
 
 
 @endsection
- <!-- Javascript -->
-        <script src="js/jquery-1.8.2.min.js"></script>
-        <script src="js/supersized.3.2.7.min.js"></script>
-        <script src="js/supersized-init.js"></script>
-        <script src="js/scripts.js"></script>
+ <!-- Javascript -->}
+
+    
+ <script src="{{ asset('js/jquery-1.8.2.min.js')}}"></script>
+ <script src="{{ asset('js/supersized.3.2.7.min.js')}}"></script>
+ <script src="{{ asset('js/supersized-init.js')}}"></script>
+ <script src="{{ asset('js/scripts.js')}}"></script>
+
+
+ 
+     
+  
 </body>
 
 </html>

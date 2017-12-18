@@ -48,7 +48,7 @@
     
 
 
-<form class="form-horizontal">
+<form class="form-horizontal"   action="index" method="get" >
 
   <div class="form-group">
     <label class="control-label col-sm-2" for="email">Circuitos:</label>
@@ -169,7 +169,7 @@
 
 <div class="botones">
   
-<button  class="btn btn-primary " name="res" type="res">
+<button  class="btn btn-primary "  name="postcircuito" value="postcircuito">
         Reservar
        </button>
 

